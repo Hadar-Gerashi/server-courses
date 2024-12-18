@@ -31,8 +31,8 @@ app.use("/api/student",routes)
 app.use("/api/courseForStudent",routesCourseFor)
 // let port=process.env.PORT;
 
-app.listen(8000,()=>{
-    console.log("app is listening in port 8000 ")
+app.listen(8000,"localhost",()=>{
+    console.log("app is listening in port 8000")
 })
 
 
