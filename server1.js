@@ -5,6 +5,7 @@ import routes from "./routes/student.js";
 import routesCourseFor from "./routes/courseForStu.js";
 import dotenv from "dotenv"
 import fs from "fs/promises"
+import cors from 'cors'
 
 
 function PrintToLog(req, res, next) {
@@ -23,6 +24,7 @@ dotenv.config()
 const app = express()
 
 connectToDB()
+app.use(cors())
 app.use(PrintToLog)
 app.use(express.json())
 
