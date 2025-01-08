@@ -148,3 +148,21 @@ export async function payFine(req,res){
 
 
 }
+
+
+
+export async function deleteById(req, res) {
+    let {id}=req.params
+    try {
+        let data=await studentModel.findByIdAndDelete(id)
+        if(!data)
+        return res.status(400).json({ title: "cannot found such id to delete", massege: err.massege })
+
+        res.json(data)
+
+    }
+    catch (err) {
+        console.log(err)
+        res.status(400).json({ title: "cannot delete", massege: err.massege })
+    }
+}
