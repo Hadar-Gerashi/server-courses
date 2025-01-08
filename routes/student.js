@@ -10,6 +10,7 @@ routes.get("/:id",getById)
 routes.post("/login",logIn_add)
 routes.post("/",add_sighIn)
 routes.put("/:id",update)
+routes.delete("/:id",update)
 
 
 
